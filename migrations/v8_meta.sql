@@ -18,7 +18,7 @@ CREATE TABLE meta.etl_runs (
 );
 
 -- =====================================================
--- We must to create a initial insert in the table watermarks
+-- We must to create an initial insert in the table watermarks
 --          INSERT INTO meta.pipeline_watermarks
 --          VALUES ('bbva_data_pipeline', 0);
 -- =====================================================
