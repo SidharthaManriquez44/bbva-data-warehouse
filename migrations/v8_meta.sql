@@ -27,3 +27,16 @@ CREATE TABLE meta.pipeline_watermarks (
     pipeline_name TEXT PRIMARY KEY,
     last_year INTEGER
 );
+
+-- =====================================================
+-- Table: etl_step_metrics
+-- Purpose: It is used to record how many rows pass
+--          through each step of the pipeline
+-- =====================================================
+CREATE TABLE meta.etl_step_metrics (
+    id BIGSERIAL PRIMARY KEY,
+    pipeline_name VARCHAR(100),
+    step_name VARCHAR(100),
+    rows_processed INT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
